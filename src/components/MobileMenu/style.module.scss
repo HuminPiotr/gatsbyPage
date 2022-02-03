@@ -1,0 +1,23 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 50px 20px;
+    background-color: var(--bs-yellow);
+    z-index: 4;
+    transform: translateX(100%);
+    transition: .3s;
+
+    p, a{
+        color: var(--bs-secondary);
+    }
+}
+
+.active{
+    transform: translateX(0%);
+}

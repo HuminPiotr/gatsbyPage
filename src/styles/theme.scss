@@ -1,0 +1,32 @@
+
+$theme-colors: (
+  "primary": #fff,
+  "secondary": #000,
+  "dark": #333333,
+  "yellow": #FFCC48,
+);
+
+
+$grid-columns: 12;
+$grid-gutter-width: 30;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 320px,
+  md: 768px,
+  lg: 992px,
+  xl: 1280px,
+  xxl: 1400px
+);
+
+$container-max-widths: (
+  xs: 300px,
+  sm: 550px,
+  md: 728px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1570px
+);
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";

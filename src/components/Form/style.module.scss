@@ -1,0 +1,125 @@
+.form{
+    width: 100%;
+    background-color: var(--bs-primary);;
+    max-width: 100%;
+    float: none;
+    margin: 0 auto;
+    color: #727272;
+    font-size: 14px;
+    padding: 20px;
+
+    @media(min-width:1570px){
+        font-size: 18px;
+        max-width: 449px;
+        height: 638px;
+        float: right;
+        padding: 33px;
+    }
+
+}
+
+.title{
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bs-secondary);
+    
+    @media(min-width: 768px){
+        font-size: 22px;
+    }
+    @media(min-width: 1570px){
+        font-size: 28px;
+    }
+
+}
+
+.header{
+    color: var(--bs-secondary);;
+    font-weight: 700;
+    margin-bottom: 10px;
+
+    @media(min-width: 1570px){
+        margin-bottom: 33px;
+    }
+}
+
+.fieldsWrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.field{
+    padding: 10px;
+    border: 1px solid var(--bs-secondary);;
+    margin-bottom: 8px;
+    font-size: 12px;
+
+    @media(min-width: 960px){
+        margin-bottom: 12px;
+    }
+    
+    @media (min-width: 1570px){
+        padding: 11px 17px;
+        margin-bottom: 21px;
+        font-size: 18px;
+    }
+}
+
+.assent{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 10px;
+    user-select: none;
+    padding-left: 35px;
+    margin-bottom: 15px;
+
+    a{
+        color: #727272;
+
+        &:hover{
+            color: var(--bs-secondary);
+        }
+    }
+
+
+    input {
+        position: absolute;
+        opacity: 0;
+        height: 0;
+        width: 0;
+
+        /* Show the checkmark when checked */
+        &:checked ~ span:after{
+            display: block;
+        }
+    }
+
+    @media(min-width: 768px){
+        margin-bottom: 26px;
+    }
+}
+
+.checkmark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid var(--bs-secondary);;
+
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &:after {
+        content: "";
+        position: absolute;
+        display: none;
+        left: 5px;
+        top: 3px;
+        width: 8px;
+        height: 10px;
+        border: solid var(--bs-secondary);;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+      }
+    
+}
+

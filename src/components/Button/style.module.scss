@@ -1,0 +1,54 @@
+.button{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    height: 45px;
+    overflow-x: hidden;
+
+    p{
+        color: var(--bs-primary);;
+        letter-spacing: 4px;
+        font-weight: 700;
+    }
+
+    &:hover {
+        p{
+            color: var(--bs-secondary);
+        }
+
+        .backgroundHover {
+            left: 0;
+        }
+    }
+
+    @media(min-width: 550px){
+        font-size: 18px;
+        height: 52px;
+    }
+}
+
+.background{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-secondary);
+}
+
+.backgroundHover{
+    position:absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bs-yellow);
+    transition: .3s;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

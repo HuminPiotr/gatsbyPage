@@ -1,0 +1,84 @@
+
+.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+.panel{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    z-index: 3;
+
+}
+
+.progressBar{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 11px;
+    p{
+        color: var(--bs-primary);
+        margin: 0 20px;
+        font-size: 14px;
+    }
+    &__loader{
+        display: flex;
+        height: 6px;
+        width: 100%;
+        max-width: 209px;
+        background-color: var(--bs-primary);;
+    }
+
+    @media (min-width: 768px){
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+
+.arrows{
+    display: flex;
+}
+
+.slide{
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    transition: .3s;
+
+    div{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+
+.active{
+    display: block ;
+    animation: appear ease-out 0.3s;
+
+}
+
+@keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
