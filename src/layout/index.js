@@ -32,7 +32,6 @@ const Layout = ({ children }) => {
       </div>
         {children} 
       <footer>
-
       </footer>
     </div>
   ) 

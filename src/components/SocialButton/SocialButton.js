@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 // Styles
 import { wrapper } from './style.module.scss';
 
-
-
 const SocialButton = ( { icon, link } ) => {
 
     return(

@@ -1,0 +1,145 @@
+.wrapper{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    a{
+        color: var(--bs-secondary);
+    }
+
+    div {
+        img{
+            animation: ease-out zoomOut .3s;
+        }
+    }
+
+    &:hover{
+        div {
+            img{
+                animation: forwards ease-out zoom .3s;
+            }
+        }
+    }
+}
+
+.header{
+    min-width: 223px;
+    max-width: 324px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 15px 20px;
+    background-color: var(--bs-primary);
+    z-index: 2;
+    white-space: pre-line;
+
+    
+    h3{
+        font-size: 16px;
+        font-weight: 700;
+        position: relative;
+        margin-bottom: 40px;
+
+        // yellow square
+        &::before{
+            content: '';
+            position: absolute;
+            top: -11px;
+            left: -11px;
+            width: 42px;
+            height: 42px;
+            background-color: var(--bs-yellow);
+            z-index: -1;
+        }
+
+    }
+
+    p{
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+        position: relative;
+
+        // black line
+        &::after{
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 0px;
+            width: 49px;
+            height: 5px;
+            background-color: var(--bs-secondary);
+        }        
+    }
+
+    @media (min-width: 550px){
+        padding: 25px;
+        h3{
+            font-size: 18px;
+
+        }
+        p{
+            font-size: 14px;
+        }
+    }
+
+    @media (min-width: 1280px){
+        padding: 35px 35px 24px 35px;
+        top: 29px;
+        left: 29px;
+        h3{
+            font-size: 28px;
+        }
+        p{
+            font-size: 18px;
+        }
+    }
+}
+
+.headerBottom{
+    @extend .header;
+    top: auto;
+    bottom: 15px;
+
+    @media (min-width: 1280px){
+        min-height: 195px;
+        bottom: 29px;
+
+    }
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+}
+
+.button{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.2);
+
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+
+    }
+}

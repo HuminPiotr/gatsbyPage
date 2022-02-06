@@ -60,8 +60,8 @@ const Carousel = ({ images }) => {
             }           
             <div className={panel}>
                 <div className={arrows}>
-                    <ArrowButton width="160px" height="118px" type="prev" onClick={goToPrevSlide} />
-                    <ArrowButton width="145px" height="118px" type="next" onClick={goToNextSlide} />
+                    <ArrowButton size="xl" type="prev" onClick={goToPrevSlide} width="160px" />
+                    <ArrowButton size="xl" type="next" onClick={goToNextSlide} />
                 </div>
 
                 <div className={progressBar}>
