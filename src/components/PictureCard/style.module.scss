@@ -1,0 +1,33 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+
+    p{
+        margin-top: 28px;
+        padding: 0 20px;
+
+        @media (min-width: 768px){
+            font-size: 18px;
+            text-align: left;
+            padding: 0;
+        }
+        
+        @media (min-width: 1400px){
+            font-size: 28px;
+        }
+    }
+}
+
+.picture{
+    height: 140px;
+    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 768px){
+        position: relative;
+        img{
+            position: absolute;
+        }
+    }
+}

@@ -7,6 +7,7 @@ import Seo from "components/Seo"
 import Carousel from "components/Carousel"
 import Form from "components/Form/Form";
 import PhotoCard from "components/PhotoCard";
+import PictureCard from "components/PictureCard";
 
 const IndexPage = ({ data }) => {
 
@@ -31,7 +32,7 @@ const IndexPage = ({ data }) => {
         <Container>
           <section className="photoCards">
             <Row xs={1} md={2}>
-              <Col className="pr-5">
+              <Col >
                 <PhotoCard
                   image={data.photoCardImages.edges[0]}
                   title="Biuro"
@@ -67,6 +68,36 @@ const IndexPage = ({ data }) => {
               </Col>
             </Row>
           </section>
+
+          <section className="pictureCards">
+            <Row xs={1} md={2} lg={4} className="justify-content-space-between">
+              <Col >
+                <h2>Lorem ipsum dolor sit amet, conse</h2>
+              </Col>
+              <Col >
+                 <PictureCard pictureSrc='/picture-1.svg' signature="Lorem ipsum" picturePosition={{top: 0, left: 3}}/>
+              </Col>
+              <Col >
+                 <PictureCard pictureSrc='/picture-2.svg' signature="Lorem ipsum dolor sit amet conse"  picturePosition={{top: 7, left: 3}} />
+              </Col>
+              <Col>
+                 <PictureCard pictureSrc='/picture-3.svg' signature="Lorem ipsum dolor sit amet, conse" picturePosition={{top: -4, left: 3}} />
+              </Col>
+              <Col>
+                 <PictureCard pictureSrc='/picture-4.svg' signature="Lorem ipsum dolor sit amet, conse" picturePosition={{top: 8, left: -1}} />
+              </Col>
+              <Col>
+                 <PictureCard pictureSrc='/picture-5.svg' signature="Lorem ipsum dolor sit amet, conse lorem ipsum lorem ipsum" picturePosition={{top: 16, left: 2}}/>
+              </Col>
+              <Col>
+                 <PictureCard pictureSrc='/picture-6.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: -1, left: 0}} />
+              </Col>
+              <Col>
+                 <PictureCard pictureSrc='/picture-7.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: 15, left: 1}} />
+              </Col>
+            </Row>
+          </section>
+          
         </Container>
       </Layout>
     </>
