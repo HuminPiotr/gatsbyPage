@@ -1,14 +1,15 @@
 .button{
     position: relative;
     text-transform: uppercase;
-    font-size: 14px;
     height: 45px;
-    overflow-x: hidden;
+    width: 100%;
 
     p{
+        font-size: 14px;
         color: var(--bs-primary);;
         letter-spacing: 4px;
         font-weight: 700;
+        width: 100%;
     }
 
     &:hover {
@@ -17,13 +18,20 @@
         }
 
         .backgroundHover {
-            left: 0;
+            transform: scaleX(1);
         }
     }
 
+    img{
+        filter: invert(100%);
+
+    }
+
     @media(min-width: 550px){
-        font-size: 18px;
         height: 52px;
+        p{
+            font-size: 18px;
+        }
     }
 }
 
@@ -39,10 +47,12 @@
 .backgroundHover{
     position:absolute;
     top: 0;
-    left: -100%;
+    left: 0%;
     width: 100%;
     height: 100%;
     background-color: var(--bs-yellow);
+    transform: scaleX(0);
+    transform-origin: left;
     transition: .3s;
 }
 
@@ -51,4 +61,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.arrow{
+    padding: 39px 0;
+    margin-bottom: 20px;
+    max-width: 200px;
+    &::after{
+        content: url('/arrowButton2.svg');
+        position: absolute;
+        top: 0;
+        right: -68px;
+    }
+
+    @media(min-width: 728px ){
+        max-width: 100%;
+    }
+    
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import { form, fieldsWrapper, title, header, field, assent, checkmark } from './style.module.scss';
 // children components
 import { Link } from "gatsby";
-import Button from '../Button/Button';
+import Button from 'components/Button';
 
 const Form = () => {
 

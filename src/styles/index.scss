@@ -117,6 +117,12 @@
         
     }
 
+    .col:last-child{
+        display: flex;
+        justify-content: center;
+        margin-top: 36px;
+    }
+
     @media (min-width: 768px){
         h2{
             font-size: 36px;
@@ -147,6 +153,11 @@
         }
         .col:nth-child(8){
             padding-left: 100px;
+        }
+        .col:last-child{
+            margin-top: 36px;
+            padding-right: 80px;
+            justify-content: flex-start;
         }
     }
 

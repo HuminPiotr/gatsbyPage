@@ -8,6 +8,7 @@ import Carousel from "components/Carousel"
 import Form from "components/Form/Form";
 import PhotoCard from "components/PhotoCard";
 import PictureCard from "components/PictureCard";
+import Button from "components/Button";
 
 const IndexPage = ({ data }) => {
 
@@ -95,9 +96,12 @@ const IndexPage = ({ data }) => {
               <Col>
                  <PictureCard pictureSrc='/picture-7.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: 15, left: 1}} />
               </Col>
+              <Col>
+                  <Button variant="arrow">Dowiedz się więcej</Button>
+              </Col>
             </Row>
           </section>
-          
+
         </Container>
       </Layout>
     </>
