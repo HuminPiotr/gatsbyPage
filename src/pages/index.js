@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from 'gatsby';
 // Children components
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Container, Row, Col } from 'react-bootstrap';
 import Layout from "layout"
 import Seo from "components/Seo"
@@ -11,7 +12,8 @@ import PictureCard from "components/PictureCard";
 import Button from "components/Button";
 
 const IndexPage = ({ data }) => {
-
+  console.log(data.baner);
+  const baner = getImage(data.baner.edges[0].node.childImageSharp.gatsbyImageData);
   return (
     <>
       <Seo title="Strona główna" />
@@ -101,8 +103,16 @@ const IndexPage = ({ data }) => {
               </Col>
             </Row>
           </section>
-
         </Container>
+
+        
+        <section className="banner">
+            <img src="/ornament.svg" className="ornament" alt="ornament"  />
+            <GatsbyImage image={baner}/>
+            <h2>{`Lorem ipsum \n vs własne biuro`}</h2>
+        </section>
+        <div className="clearfix"></div>
+
       </Layout>
     </>
   )
@@ -133,6 +143,16 @@ export const query = graphql`
       edges {
         node {
           childrenImageSharp {
+            gatsbyImageData
+          }
+        }
+      }
+    }
+
+    baner: allFile(filter: {absolutePath: {regex: "/baner/"}}) {
+      edges {
+        node {
+          childImageSharp {
             gatsbyImageData
           }
         }
