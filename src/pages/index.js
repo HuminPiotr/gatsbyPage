@@ -10,10 +10,11 @@ import Form from "components/Form/Form";
 import PhotoCard from "components/PhotoCard";
 import PictureCard from "components/PictureCard";
 import Button from "components/Button";
+import NewsCard from "components/NewsCard";
 
 const IndexPage = ({ data }) => {
-  console.log(data.baner);
   const baner = getImage(data.baner.edges[0].node.childImageSharp.gatsbyImageData);
+
   return (
     <>
       <Seo title="Strona główna" />
@@ -113,6 +114,35 @@ const IndexPage = ({ data }) => {
         </section>
         <div className="clearfix"></div>
 
+        <section className="news">
+          <Container>
+            <h2>Aktualności</h2>
+            <div className='newsRow'>
+                <NewsCard  
+                  image={data.news.edges[0]}
+                  date={new Date('2022-01-01')}
+                  title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  link="/"
+                  imageAlt="Uśmiechnięta kobieta za ladą"
+                />
+                <NewsCard 
+                  image={data.news.edges[1]}
+                  date={new Date(2022, 1, 1)}
+                  title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  link="/"
+                  imageAlt="Biały pokój z meblami"
+                />
+                <NewsCard 
+                  image={data.news.edges[2]}
+                  date={new Date(2022, 1, 1)}
+                  title="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                  link="/"
+                  imageAlt="Ciemny umeblowany pokój"
+                />
+            </div>
+          </Container>  
+        </section>
+
       </Layout>
     </>
   )
@@ -154,6 +184,18 @@ export const query = graphql`
         node {
           childImageSharp {
             gatsbyImageData
+          }
+        }
+      }
+    }
+
+    news:  allFile(filter: {absolutePath: {regex: "/news/"}}) {
+      edges {
+        node {
+          childImageSharp {
+            gatsbyImageData( 
+              quality: 100
+            )
           }
         }
       }

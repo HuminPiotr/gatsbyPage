@@ -25,6 +25,7 @@ button{
 
 a{
   text-decoration: none;
+  font-size: 18px;
 
   &:hover{
     color: inherit;
@@ -33,4 +34,19 @@ a{
 
 ul{
   padding: 0;
+}
+
+h2{
+  font-size: 48px;
+  font-weight: 700;
+
+  @media(min-width: 1570px){
+    font-size: 65px;
+
+  }
+}
+
+h3{
+  font-size: 28px;
+  font-weight: 700;
 }

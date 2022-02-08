@@ -33,7 +33,7 @@ const PhotoCard = ({image, title, subtitle, link, headerPosition}) => {
 }
 
 PhotoCard.propTypes = {
-    image: PropTypes.string.isRequired,
+    image: PropTypes.object.isRequired,
     title: PropTypes.string.isRequired,
     subtitle: PropTypes.string,
     link: PropTypes.string,
