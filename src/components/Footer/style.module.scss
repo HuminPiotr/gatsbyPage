@@ -67,9 +67,14 @@
 }
 
 .footer__ornament{
-    position: absolute;
+    position: relative;
     top: -120px;
     right: 0;
+    margin: 0 auto;
+
+    @media (min-width: 1140px){
+        position: absolute;
+    }
 }
 
 .signature{

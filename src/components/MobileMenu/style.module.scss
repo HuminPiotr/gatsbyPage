@@ -17,6 +17,7 @@
         color: var(--bs-secondary);
         text-align: left;
         align-self: center;
+        text-align: center;
     }
 
     h2{
@@ -27,8 +28,9 @@
     }
 
     li{
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
+
 }
 
 .active{

@@ -12,7 +12,7 @@ const MobileMenu = ({ isOpen, onClick }) => {
         <div className={isOpen ? `${active} ${wrapper}` : wrapper }>
                 <Navigation onClick={onClick}/>
                 <BusinessCard />
-                <div className="socials d-flex justify-content-center">
+                <div className="socials d-flex justify-content-center mt-4">
                     <SocialButton icon="facebook" link="https://www.facebook.com/" />
                     <SocialButton icon="instagram" link="https://www.instagram.com/" />
                 </div>
