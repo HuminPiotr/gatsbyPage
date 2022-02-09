@@ -19,18 +19,18 @@ const Navigation = ({ className, onClick}) => {
               </Link>
 
             </li>
-            <li   className='me-xxl-5' >
+            <li   >
               <Link to="#"  onClick={() => onClick(false)}>Lokalizacja
                 <span className={hoverEffect}></span>
               </Link> 
               
             </li>
-            <li  className='ms-xxl-5 me-xxl-5' >
+            <li   >
               <Link  to="#" onClick={() => onClick(false)}  >Własne biuro
                 <span className={hoverEffect}></span>
               </Link> 
               </li>
-            <li  className='ms-xxl-5' >
+            <li   >
               <Link to="#" onClick={() => onClick(false)} >Kontakt
                 <span className={hoverEffect}></span>
               </Link> 

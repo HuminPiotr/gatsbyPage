@@ -101,6 +101,7 @@
     }
     
     h2{
+        font-size: 36px;
         position: relative;
         font-weight: 700;
 
@@ -129,8 +130,6 @@
 
     @media (min-width: 768px){
         h2{
-            font-size: 36px;
-
             &::after{
                 bottom: -113px;
                 height: 10px;
@@ -292,6 +291,16 @@
 }
 
 footer{
-    height: 100vh;
-    background-color:violet;
+    padding: 90px 0 40px;
+    background-color:var(--bs-secondary);
+    color: var(--bs-primary);
+    margin-top: 1149px;
+
+    .container{
+        display: flex;
+    }
+
+    a{
+        color: var(--bs-primary);
+    }
 }

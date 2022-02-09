@@ -1,7 +1,7 @@
 .navigation{
     display: flex;
     align-items: center;
-    padding-top: 21px;
+    padding-top: 6px;
     color: var(--bs-primary);
     margin-bottom: 7px;
     font-size: 28px;
@@ -31,20 +31,30 @@
 
 
      @media (min-width: 1200px){
-         font-size: 16px;
          font-weight: 500;
-
+         
          ul{
              flex-direction: row;
-         }
-         li{
+            }
+        li{
             margin-bottom: 0px;
-
+         }
+         a{
+             font-size: 16px;
          }
      }
 
      @media (min-width: 1570px){
-        padding-right: 160px;
+        padding-right: 117px;
+
+        li{
+            &:nth-child(3){
+                margin-right: 125px;
+            }
+            &:nth-child(4){
+                margin-right: 125px;
+            }
+        }
 
      }
 }

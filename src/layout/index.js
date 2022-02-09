@@ -8,6 +8,7 @@ import Logo from "components/Logo/Logo";
 import SocialButton from "components/SocialButton/SocialButton";
 import Burger from 'components/Burger';
 import MobileMenu from 'components/MobileMenu';
+import Footer from "components/Footer";
 // Styles
 import 'styles/index.scss';
 import {navBar, socials} from './style.module.scss'
@@ -31,8 +32,7 @@ const Layout = ({ children }) => {
 
       </div>
         {children} 
-      <footer>
-      </footer>
+      <Footer />
     </div>
   ) 
 }
@@ -41,4 +41,4 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Layout
+export default Layout;
