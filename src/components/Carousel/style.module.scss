@@ -35,13 +35,7 @@
         margin: 0 20px;
         font-size: 14px;
     }
-    &__loader{
-        display: flex;
-        height: 6px;
-        width: 100%;
-        max-width: 209px;
-        background-color: var(--bs-primary);;
-    }
+
 
     @media (min-width: 768px){
         p{
@@ -50,6 +44,30 @@
     }
 }
 
+
+.progressBar__container{
+    height: 6px;
+    width: 100%;
+    max-width: 209px;
+    background-color: var(--bs-secondary);;
+}
+
+.progressBar__loader{
+    width: 0%;
+    height: 6px;
+    background-color: var(--bs-primary);;
+}
+
+.inprogress{
+    animation-name: progress-animation;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes progress-animation{
+    0% { width: 0%; }
+    100% { width: 100% }
+}
 
 .arrows{
     display: flex;

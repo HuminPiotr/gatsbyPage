@@ -1,14 +1,17 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import PropTypes from "prop-types";
 // Style
-import { wrapper, slide, active, overlay, panel, progressBar, progressBar__loader, arrows  } from './style.module.scss';
+import { wrapper, slide, active, overlay, panel, progressBar, progressBar__loader, progressBar__container, arrows, inprogress  } from './style.module.scss';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 // Children components
 import ArrowButton from 'components/ArrowButton';
 
 const Carousel = ({ images }) => {
     const [currentSlide, setCurrentSlide ] = useState(1);
-    const numberOfSlides = images.length ;
+    const numberOfSlides = images.length;
+    const loader = useRef(null);
+    const timeToChangeSlide = 6000;
+
     
     const hiddeSlide = (id) => {
         const slide = document.getElementById(id);
@@ -35,6 +38,9 @@ const Carousel = ({ images }) => {
     }
 
     const goToNextSlide = () => {
+        // reset animation progress bar
+        loader.current.classList.remove(inprogress);
+        
         hiddeSlide(currentSlide);
         if(currentSlide === numberOfSlides){
             setCurrentSlide(1);
@@ -47,6 +53,22 @@ const Carousel = ({ images }) => {
             showSlide(currentSlide + 1)
         }
     }
+
+    useEffect(() => {
+        const idInterval = setInterval(() => {
+            goToNextSlide();
+        },timeToChangeSlide);
+
+        setTimeout(() => {
+            loader.current.classList.add(inprogress);
+            loader.current.style.animationDuration = `${timeToChangeSlide / 1000}s`;
+        },2);
+
+        return () => {
+            clearInterval(idInterval);
+            loader.current.classList.remove(inprogress);
+        }
+    });
 
     return (
         <div className={wrapper}>
@@ -66,7 +88,9 @@ const Carousel = ({ images }) => {
 
                 <div className={progressBar}>
                     <p>0{currentSlide}</p>
-                    <div className={progressBar__loader}></div>
+                    <div className={progressBar__container}>
+                        <div ref={loader} className={progressBar__loader}  ></div>
+                    </div>
                     <p>03</p>
                 </div>
             </div>
