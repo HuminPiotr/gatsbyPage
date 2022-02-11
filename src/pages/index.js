@@ -20,6 +20,7 @@ const IndexPage = ({ data }) => {
     <>
       <Seo title="Strona główna" />
       <Layout>
+
         <section className="hero">
           <Carousel images={data.carouselImages.edges} />
           <Container>
@@ -35,6 +36,7 @@ const IndexPage = ({ data }) => {
           </Container>
         </section>
         <Container>
+
           <section className="photoCards">
             <Row xs={1} md={2}>
               <Col >
@@ -145,6 +147,7 @@ const IndexPage = ({ data }) => {
         </section>
 
           <GallerySlider images={data.gallery.edges}/>
+          
       </Layout>
     </>
   )
@@ -203,7 +206,7 @@ export const query = graphql`
       }
     }
 
-    gallery:   allFile(filter: 
+    gallery: allFile(filter: 
       {absolutePath: {regex: "/gallery/"}}
       sort: {fields: relativePath}
     ) {

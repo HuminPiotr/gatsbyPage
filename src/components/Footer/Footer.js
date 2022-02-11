@@ -1,11 +1,9 @@
 import React from 'react';
-
 // Children components
 import { Link } from 'gatsby';
 import { StaticImage } from "gatsby-plugin-image";
 import { Container } from 'react-bootstrap';
 import BusinessCard from 'components/BusinessCard';
-
 // Style
 import { footer, footer__top, footer__navigation, footer__bottom, footer__ornament, signature} from './style.module.scss';
 
@@ -13,7 +11,7 @@ const Footer = () => {
 
     return(
     <footer className={footer}>
-        <Container className="flex-wrap position-relative">
+        <Container className="flex-wrap position-relative d-flex">
         <StaticImage src="../../images/ornament_footer.svg" className={footer__ornament} />
         <div className={footer__top}>
             <BusinessCard />

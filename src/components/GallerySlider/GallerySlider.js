@@ -52,7 +52,6 @@ const GallerySlider = ({ images }) => {
     
     const imageList = images.map( (item,index ) => {
         const image = getImage(item.node.childrenImageSharp[0]);
-        console.log(item.node.publicURL);
         return (
                 <a href={item.node.publicURL}>
                         <GatsbyImage image={image} alt={`gallery-${index}`} />

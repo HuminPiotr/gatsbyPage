@@ -1,5 +1,5 @@
 @import './theme.scss';
-@import './global.scss';
+@import './base.scss';
 
 .hero{
     height: 100vh;
@@ -192,7 +192,6 @@
     }
 
     h2{
-
         font-size: 24px;
         font-weight: 700;
         position: absolute;
@@ -206,7 +205,6 @@
             height: 20px;
             background-color: var(--bs-secondary);
             margin-top: 7%;
-
         }
     }
 
@@ -240,7 +238,7 @@
         }
     }
 
-    @media(min-width: 1570px){
+    @media(min-width: 1870px){
         h2{
             font-size: 65px;
             top: 215px;
