@@ -1,4 +1,15 @@
 .footer{
+    padding: 90px 0 40px;
+    background-color:var(--bs-secondary);
+    
+    a,p,h2{
+        color: var(--bs-primary);
+    }
+
+    a:hover{
+        color: var(--bs-primary);        
+    }
+
     .container{
         flex-wrap: wrap;
         div {

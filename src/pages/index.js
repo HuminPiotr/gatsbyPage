@@ -11,6 +11,7 @@ import PhotoCard from "components/PhotoCard";
 import PictureCard from "components/PictureCard";
 import Button from "components/Button";
 import NewsCard from "components/NewsCard";
+import GallerySlider from "components/GallerySlider";
 
 const IndexPage = ({ data }) => {
   const baner = getImage(data.baner.edges[0].node.childImageSharp.gatsbyImageData);
@@ -143,6 +144,7 @@ const IndexPage = ({ data }) => {
           </Container>  
         </section>
 
+          <GallerySlider images={data.gallery.edges}/>
       </Layout>
     </>
   )
@@ -197,6 +199,23 @@ export const query = graphql`
               quality: 100
             )
           }
+        }
+      }
+    }
+
+    gallery:   allFile(filter: 
+      {absolutePath: {regex: "/gallery/"}}
+      sort: {fields: relativePath}
+    ) {
+      edges {
+        node {
+          childrenImageSharp {
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+            )
+          }
+          publicURL
         }
       }
     }

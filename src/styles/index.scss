@@ -259,7 +259,7 @@
 .news{
     display: flex;
     justify-content: space-between;
-    margin-bottom: 90px;
+    margin-bottom: 93px;
 
     h2{
         text-align: center;
@@ -287,20 +287,5 @@
             justify-content: space-between;
         }
 
-    }
-}
-
-footer{
-    padding: 90px 0 40px;
-    background-color:var(--bs-secondary);
-    color: var(--bs-primary);
-    margin-top: 1149px;
-
-    .container{
-        display: flex;
-    }
-
-    a{
-        color: var(--bs-primary);
     }
 }
