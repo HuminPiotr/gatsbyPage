@@ -11,7 +11,7 @@ const Footer = () => {
 
     return(
     <footer className={footer}>
-        <Container className="flex-wrap position-relative d-flex">
+        <Container className="flex-wrap position-relative d-flex md:d-static">
         <StaticImage src="../../images/ornament_footer.svg" className={footer__ornament} />
         <div className={footer__top}>
             <BusinessCard />

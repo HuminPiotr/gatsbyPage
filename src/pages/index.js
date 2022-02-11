@@ -82,25 +82,25 @@ const IndexPage = ({ data }) => {
                 <h2>Lorem ipsum dolor sit amet, conse</h2>
               </Col>
               <Col >
-                 <PictureCard pictureSrc='/picture-1.svg' signature="Lorem ipsum" picturePosition={{top: 0, left: 3}}/>
+                 <PictureCard pictureSrc='pictureCards/picture-1.svg' signature="Lorem ipsum" picturePosition={{top: 0, left: 3}}/>
               </Col>
               <Col >
-                 <PictureCard pictureSrc='/picture-2.svg' signature="Lorem ipsum dolor sit amet conse"  picturePosition={{top: 7, left: 3}} />
+                 <PictureCard pictureSrc='pictureCards/picture-2.svg' signature="Lorem ipsum dolor sit amet conse"  picturePosition={{top: 7, left: 3}} />
               </Col>
               <Col>
-                 <PictureCard pictureSrc='/picture-3.svg' signature="Lorem ipsum dolor sit amet, conse" picturePosition={{top: -4, left: 3}} />
+                 <PictureCard pictureSrc='pictureCards/picture-3.svg' signature="Lorem ipsum dolor sit amet, conse" picturePosition={{top: -4, left: 3}} />
               </Col>
               <Col>
-                 <PictureCard pictureSrc='/picture-4.svg' signature="Lorem ipsum dolor sit amet, conse" picturePosition={{top: 8, left: -1}} />
+                 <PictureCard pictureSrc='pictureCards/picture-4.svg' signature="Lorem ipsum dolor sit amet, conse" picturePosition={{top: 8, left: -1}} />
               </Col>
               <Col>
-                 <PictureCard pictureSrc='/picture-5.svg' signature="Lorem ipsum dolor sit amet, conse lorem ipsum lorem ipsum" picturePosition={{top: 16, left: 2}}/>
+                 <PictureCard pictureSrc='pictureCards/picture-5.svg' signature="Lorem ipsum dolor sit amet, conse lorem ipsum lorem ipsum" picturePosition={{top: 16, left: 2}}/>
               </Col>
               <Col>
-                 <PictureCard pictureSrc='/picture-6.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: -1, left: 0}} />
+                 <PictureCard pictureSrc='pictureCards/picture-6.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: -1, left: 0}} />
               </Col>
               <Col>
-                 <PictureCard pictureSrc='/picture-7.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: 15, left: 1}} />
+                 <PictureCard pictureSrc='pictureCards/picture-7.svg' signature="Lorem ipsum dolor sit amet amet, conse lorem ipsum lorem" picturePosition={{top: 15, left: 1}} />
               </Col>
               <Col>
                   <Button variant="arrow">Dowiedz się więcej</Button>
