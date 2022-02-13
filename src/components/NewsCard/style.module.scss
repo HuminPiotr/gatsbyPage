@@ -2,6 +2,10 @@
     width: 450px;
     margin-bottom: 50px;
 
+    p,h3,a{
+        padding-left: 20px;
+    }
+
     p{
         font-size: 18px;
         margin: 34px 0 20px;
@@ -14,5 +18,11 @@
     a{
         text-decoration: underline;
         color: var(--bs-secondary);
+    }
+
+    @media (min-width: 550px){
+        p,h3,a{
+            padding-left: 0px;
+        }
     }
 }

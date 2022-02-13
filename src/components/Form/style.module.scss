@@ -6,7 +6,12 @@
     margin: 0 auto;
     color: #727272;
     font-size: 14px;
-    padding: 15px;
+    padding: 20px;
+
+    p{
+        margin-bottom: 5px;
+    }
+
 
     @media(min-width:1570px){
         font-size: 18px;

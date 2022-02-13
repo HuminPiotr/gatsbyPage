@@ -104,8 +104,8 @@
         font-size: 36px;
         position: relative;
         font-weight: 700;
+        padding-left: 20px;
 
-    
         &::after{
             content: '';
             height: 5px;
@@ -113,7 +113,7 @@
             background: var(--bs-secondary);
             position: absolute;
             bottom: -25px;
-            left: 0;
+            left: 20px;
         }
         
     }
@@ -130,8 +130,10 @@
 
     @media (min-width: 768px){
         h2{
+            padding-left: 0;
             &::after{
                 bottom: -113px;
+                left: 0px;
                 height: 10px;
             }
         
